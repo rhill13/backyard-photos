@@ -1,3 +1,19 @@
 body {
   font-family: sans-serif;
 }
+
+main {
+  margin: 2rem;
+}
+
+.nav-link:hover {
+  padding-left: 4px;
+  border-radius: 5px;
+  background-color: #eeeeee;
+}
+
+.navbar-custom .nav-item:hover .nav-link {
+  background-color: #28a745;
+  color: #eeeeee;
+  border-radius: 5px;
+}
