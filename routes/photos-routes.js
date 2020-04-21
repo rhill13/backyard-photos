@@ -1,9 +1,9 @@
 const express = require("express");
 
+const photosController = require("../controllers/photos-controller");
+
 const router = express.Router();
 
-router.get("/", (req, res, next) => {
-  res.render("index", { pageTitle: "Dashboard" });
-});
+router.get("/", photosController.getDashboard);
 
 module.exports = router;
