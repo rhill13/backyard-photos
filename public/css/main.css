@@ -6,10 +6,8 @@ main {
   margin: 2rem;
 }
 
-.navbar-custom .nav-item:hover .nav-link {
+.nav-link:hover {
+  padding-left: 4px;
   border-radius: 5px;
-  padding-left: 3px;
-  margin-right: auto;
-  background-color: #28a745;
-  color: #ffffff;
+  background-color: #eeeeee;
 }
