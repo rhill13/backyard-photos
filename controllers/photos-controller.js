@@ -1,3 +1,3 @@
 exports.getDashboard = (req, res, next) => {
-  res.render("dashboard", { pageTitle: "Dashboard" });
+  res.render("photos/dashboard", { pageTitle: "Dashboard" });
 };
