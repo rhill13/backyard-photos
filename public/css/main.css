@@ -6,8 +6,10 @@ main {
   margin: 2rem;
 }
 
-.nav-link:hover {
-  padding-left: 4px;
+.navbar-custom .nav-item:hover .nav-link {
   border-radius: 5px;
-  background-color: #eeeeee;
+  padding-left: 3px;
+  margin-right: auto;
+  background-color: #28a745;
+  color: #ffffff;
 }
