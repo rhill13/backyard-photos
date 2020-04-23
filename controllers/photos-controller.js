@@ -1,3 +1,8 @@
+const Photo = require("../models/photo");
+
 exports.getDashboard = (req, res, next) => {
-  res.render("photos/dashboard", { pageTitle: "Dashboard" });
+  Photo.fetchAllPhotos((data) => {
+    console.log(data);
+    res.render("photos/dashboard", { pageTitle: "Dashboard", photos: data });
+  });
 };
