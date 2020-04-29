@@ -1,2 +1,3 @@
 *.ejs linguistic-detectable=false
+*.html linguistic-detectable=false
 *.js linguistic-detectable=true
