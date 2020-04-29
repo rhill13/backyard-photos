@@ -1,19 +1,41 @@
 body {
   font-family: sans-serif;
+  background-color: #b5ffda;
 }
 
 main {
   margin: 2rem;
 }
 
+.navbar-custom {
+  background-color: #b5ffda;
+}
+
 .nav-link:hover {
   padding-left: 4px;
   border-radius: 5px;
-  background-color: #eeeeee;
+  background-color: #ffffff;
 }
 
 .navbar-custom .nav-item:hover .nav-link {
-  background-color: #28a745;
-  color: #eeeeee;
+  background-color: #75e6ae;
+  color: #ffffff;
   border-radius: 5px;
+}
+
+.album {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.album-card {
+  margin-top: 2rem;
+  margin-left: 6rem;
+}
+
+.btn-custom {
+  background-color: #40af78;
+  color: white;
 }
