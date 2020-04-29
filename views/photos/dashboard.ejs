@@ -3,7 +3,15 @@
     <%- include('../includes/navigation.ejs') %>
     
     <main>
-      <p>Dashboard</p>
+      <% if (photos.length > 0) { %>
+        <% for (photo in photos) { %>
+          <div>
+            <p ><%= photo.title %></p>
+          </div>
+        <% } %>
+      <% } else { %>
+        <h2>No photos to view...</h2>
+      <% } %>
     </main>
 
     <%- include('../includes/scripts.ejs') %>

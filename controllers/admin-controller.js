@@ -1,6 +1,8 @@
 const fs = require("fs");
 const path = require("path");
 
+const Photo = require("../models/photo");
+
 const pathToPhotoData = path.join(__dirname, "..", "data", "photos.json");
 
 exports.getAddPhoto = (req, res, next) => {
@@ -8,18 +10,10 @@ exports.getAddPhoto = (req, res, next) => {
 };
 
 exports.postAddPhoto = (req, res, next) => {
-  fs.readFile(pathToPhotoData, (err, fileContent) => {
-    if (!err) {
-      const data = JSON.parse(fileContent);
-      data.push(req.body);
-      fs.writeFile(pathToPhotoData, JSON.stringify(data), (err) => {
-        if (err) {
-          console.log(err.message);
-        }
-      });
-    } else {
-      console.log(err.message);
-    }
-  });
+  const photoId = Math.random();
+  const photoTitle = req.body.title;
+  const photoUrl = req.body.photoUrl;
+  const photo = new Photo(photoId, photoTitle, photoUrl);
+  photo.save();
   return res.redirect("/");
 };
