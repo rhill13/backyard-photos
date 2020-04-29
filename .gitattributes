@@ -1,2 +1,1 @@
-*.ejs linguistic-detectable=false
-*.js linguistic-detectable=true
+public/*.ejs linguistic-detectable=false
