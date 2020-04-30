@@ -4,10 +4,11 @@ const path = require("path");
 const pathToData = path.join(__dirname, "..", "data", "photos.json");
 
 module.exports = class Photo {
-  constructor(id, title, photoUrl) {
+  constructor(id, title, photoUrl, description) {
     this.id = id;
     this.title = title;
     this.photoUrl = photoUrl;
+    this.description = description;
   }
 
   save() {
