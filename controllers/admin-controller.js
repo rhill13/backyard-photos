@@ -13,7 +13,8 @@ exports.postAddPhoto = (req, res, next) => {
   const photoId = Math.random();
   const photoTitle = req.body.title;
   const photoUrl = req.body.photoUrl;
-  const photo = new Photo(photoId, photoTitle, photoUrl);
+  const photoDesc = req.body.description;
+  const photo = new Photo(photoId, photoTitle, photoUrl, photoDesc);
   photo.save();
   return res.redirect("/");
 };
